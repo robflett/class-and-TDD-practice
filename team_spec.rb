@@ -6,8 +6,8 @@ class TestTeam < MiniTest::Test
 
 
     def test_get_name
-      team_name = Team.new("Wick FC", ["Jeff", "Pete", "Michelle", "Billie"], "Toby Carmichael")
-      assert_equal("Wick FC", team_name.name() )
+      team = Team.new("Wick FC", ["Jeff", "Pete", "Michelle", "Billie"], "Toby Carmichael")
+      assert_equal("Wick FC", team.team_name() )
     end
 
     def test_get_players
@@ -17,12 +17,12 @@ class TestTeam < MiniTest::Test
 
     def test_get_coach
       coach_name = Team.new("Wick FC", ["Jeff", "Pete", "Michelle", "Billie"], "Toby Carmichael")
-      assert_equal("Toby Carmichael", coach_name.coach() )
+      assert_equal("Toby Carmichael", coach_name.coach())
     end
 
     def test_set_coach
       coach_change = Team.new("Wick FC", ["Jeff", "Pete", "Michelle", "Billie"], "Toby Carmichael")
-      coach_change.set_coach("Stewart Haversham")
+      coach_change.coach = "Stewart Haversham"
       assert_equal("Stewart Haversham", coach_change.coach() )
     end
 
