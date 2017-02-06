@@ -27,7 +27,9 @@ class Team
     #   @coach = change
     # end
 
-    
+    def add_player(new_player)
+      players << new_player
+    end
 
 
 
